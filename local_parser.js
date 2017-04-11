@@ -4,8 +4,6 @@ var http = require('http'),
     bodyParser = require('body-parser');
 
 var app = express();
-var port = process.env.PORT || 3000;
-
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(express.static('public'));
 
@@ -34,10 +32,6 @@ app.post('/custom', function(req, res) {
     res.end(twiml.toString());
 });
 
-//http.createServer(app).listen(3000, function () {
-  //  console.log("Express server listening on port 3000");
-//});
-
-app.listen(port, function() {
-    console.log('Our app is running on http://localhost:'+ port);
+http.createServer(app).listen(3000, function () {
+    console.log("Express server listening on port 3000");
 });
