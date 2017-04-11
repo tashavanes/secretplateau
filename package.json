@@ -1,6 +1,6 @@
 {
   "name": "SMSAppy",
-  "version": "0.2.6",
+  "version": "0.1.1",
   "description": "This uses twilio for sending/receiving txts",
   "engines": {
     "node": "7.8.0"
@@ -12,11 +12,11 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "4.15.2",
+    "http": "0.0.0",
     "twilio": "^2.11.1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "type": "git"
   },
   "keywords": [
     "node",
