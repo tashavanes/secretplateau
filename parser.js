@@ -24,8 +24,8 @@ app.post('/custom', function(req, res) {
        });
           } else if (req.body.Body == 'Puffer') {
        twiml.message(function() {
-      		this.body('Puffer');
-      		this.media('puffer.jpg');
+      		this.body('This is a pufferfish.');
+      		this.media('https://secret-plateau-55438.herokuapp.com/puffer.jpg');
 }); 
 } else {
         twiml.message('No match, Twilio sends this in the request to your server.');
