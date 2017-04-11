@@ -1,17 +1,18 @@
 {
-  "name": "node-js-getting-started",
+  "name": "SMSAppy",
   "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "description": "This uses twilio for sending/receiving txts",
   "engines": {
-    "node": "6.10.2"
+    "node": "7.8.0"
   },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.5.6",
-    "express": "4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "4.15.2",
+    "twilio": "^2.11.1"
   },
   "repository": {
     "type": "git",
