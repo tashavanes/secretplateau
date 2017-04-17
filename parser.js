@@ -25,10 +25,15 @@ app.post('/custom', function(req, res) {
           } else if (req.body.Body == 'Puffer') {
        twiml.message(function() {
       		this.body('This is a pufferfish.');
-      		this.media('https://secret-plateau-55438.herokuapp.com/puffer.jpg');
-}); 
-} else {
-        twiml.message('No match, Twilio sends this in the request to your server.');
+      	   this.media('https://secret-plateau-55438.herokuapp.com/puffer.jpg');
+       });
+  } else if (req.body.Body == 'Diabetes') {
+       twiml.message(function() {
+      		this.body('You have requested diabetes information.');
+      		this.media('https://secret-plateau-55438.herokuapp.com/diabetes.pdf');
+       });
+  }  else {
+        twiml.message('No match to your entered text, please type "Diabetes","COPD", or "Heart Disease"');
     }
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
