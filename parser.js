@@ -30,8 +30,21 @@ app.post('/custom', function(req, res) {
   } else if (req.body.Body == 'Diabetes') {
        twiml.message(function() {
       		this.body('You have requested diabetes information.');
-      		this.media('https://secret-plateau-55438.herokuapp.com/diabetes.pdf');
+      		this.media('https://secret-plateau-55438.herokuapp.com/diabetes.jpg');
        });
+
+       } else if (req.body.Body == 'COPD') {
+       twiml.message(function() {
+      		this.body('You have requested COPD information.');
+      		this.media('https://secret-plateau-55438.herokuapp.com/copd.jpg');
+       });
+
+       } else if (req.body.Body == 'Heart') {
+       twiml.message(function() {
+      		this.body('You have requested heart disease information.');
+      		this.media('https://secret-plateau-55438.herokuapp.com/heart.jpg');
+       });
+      
   }  else {
         twiml.message('No match to your entered text, please type "Diabetes","COPD", or "Heart Disease"');
     }
