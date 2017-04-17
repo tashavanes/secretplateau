@@ -44,6 +44,12 @@ app.post('/custom', function(req, res) {
       		this.body('You have requested heart disease information.');
       		this.media('https://secret-plateau-55438.herokuapp.com/heart.jpg');
        });
+
+	    } else if (req.body.Body == 'file') {
+       twiml.message(function() {
+      		this.body('You have requested the logo file.');
+      		this.media('file.pdf');
+       });
       
   }  else {
         twiml.message('No match to your entered text, please type "Diabetes","COPD", or "Heart" for an image. Case sensitive.');
@@ -51,6 +57,10 @@ app.post('/custom', function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
 });
+
+//http.createServer(app).listen(3000, function () {
+  //  console.log("Express server listening on port 3000");
+//});
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:'+ port);
