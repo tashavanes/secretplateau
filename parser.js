@@ -44,6 +44,13 @@ app.post('/custom', function(req, res) {
       		this.body('You have requested heart disease information.');
       		this.media('https://secret-plateau-55438.herokuapp.com/heart.jpg');
        });
+
+       } else if (req.body.Body == 'file') {
+       twiml.message(function() {
+      		this.body('You have requested a file.');
+      		this.media('https://secret-plateau-55438.herokuapp.com/file.pdf');
+       });
+	   
       
   }  else {
         twiml.message('No match to your entered text, please type "Diabetes","COPD", or "Heart" for an image. Case sensitive.');
