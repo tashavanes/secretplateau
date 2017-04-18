@@ -47,8 +47,7 @@ app.post('/custom', function(req, res) {
 
        } else if (req.body.Body == 'file') {
        twiml.message(function() {
-      		this.body('You have requested a file.');
-      		this.media('https://secret-plateau-55438.herokuapp.com/file.pdf');
+      		this.body('You have requested a file. https://secret-plateau-55438.herokuapp.com/file.pdf');
        });
 	   
       
