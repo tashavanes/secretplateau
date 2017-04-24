@@ -2,8 +2,9 @@
 
 ### Testing out the twilio API for sending and receiving custom text messages
 
-* Runs locally or on heroku based on environment (hardcoded for now)
+* Runs locally or on heroku based on environment
 * sends out some images based on incoming call
-* transportable to webserver without express obvs.
+* transportable to webserver without express
 
-That's it. 
+## future plans
+* add token
