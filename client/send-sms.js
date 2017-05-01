@@ -1,6 +1,6 @@
 // Twilio Credentials
 const accountSid = 'AC8c3504522c520c193783e64e0d493739';
-const authToken = '948ff1641573d647735006c371f2ed46';
+const authToken = process.env.twikey;
 
 // require the Twilio module and create a REST client
 const client = require('twilio')(accountSid, authToken);
