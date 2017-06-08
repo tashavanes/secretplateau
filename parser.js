@@ -53,7 +53,7 @@ app.post('/custom', function(req, res) {
 	   
       
   }  else {
-        twiml.message('No match to your entered text, please type "Diabetes","COPD", or "Heart" for an image. Case sensitive.');
+        twiml.message('No match to your entered text, please type "Puffer," "Celery" or "helicopter" for an image. Case sensitive.');
     }
     res.writeHead(200, {'Content-Type': 'text/xml'});
     res.end(twiml.toString());
