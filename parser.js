@@ -45,9 +45,9 @@ app.post('/custom', function(req, res) {
       		this.media('https://secret-plateau-55438.herokuapp.com/heart.jpg');
        });
 
-       } else if (req.body.Body == 'file') {
+       } else if (req.body.Body == 'helicopter') {
        twiml.message(function() {
-      		this.body('You have requested a file. https://secret-plateau-55438.herokuapp.com/file.pdf');
+      		this.body('Helicopter! https://secret-plateau-55438.herokuapp.com/helicopter.jpg');
        });
 	   
       
