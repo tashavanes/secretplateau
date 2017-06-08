@@ -47,7 +47,8 @@ app.post('/custom', function(req, res) {
 
        } else if (req.body.Body == 'helicopter') {
        twiml.message(function() {
-      		this.body('Helicopter! https://secret-plateau-55438.herokuapp.com/helicopter.jpg');
+      		this.body('Helicopter!');
+                this.media('https://secret-plateau-55438.herokuapp.com/helicrash.gif');
        });
 	   
       
